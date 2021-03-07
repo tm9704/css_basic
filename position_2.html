@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #parent, #other{
+            border:5px solid tomato;
+        }
+        #grand{
+            position:relative;
+        }
+        #me{
+            background-color: black;
+            color:white;
+            position:absolute;
+            /* absolute의 기본 위치 값은 부모위치를 기준으로 함
+            값을 주면 제일 상위 태그 위치 기준.(정확하게는 포지션이 static이 아닌 부모를 기준으로 함.)
+            부모와의 링크도 끊기고 사이즈가 바뀜.(자기자신의 컨텐트 크기만큼으로 됨 위드값, 하이트값 지정해줘야함) 
+            */
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="grand">
+        grand;
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+    </div>
+</body>
+</html>
