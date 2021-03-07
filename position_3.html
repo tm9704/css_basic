@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #parent, #other{
+            border:5px solid tomato;
+        }
+        #large{
+            height:10000px;
+            background-color: tomato;
+        }
+        #me{
+            background-color: black;
+            color:white;
+            position:fixed;
+            left:0;
+            top:0;
+            /* fixed는 스크롤으로부터 독립 , absolute와 비슷하게 부모와의 링크가 끊김.*/
+        }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="parent">
+        parent
+        <div id="me">me</div>
+    </div>
+    <div id="large">large</div>
+</body>
+</html>
